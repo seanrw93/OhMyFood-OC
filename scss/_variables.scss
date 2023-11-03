@@ -6,5 +6,5 @@ $root_colors: (
 );
 
 @function root-color($color-name) {
-    @return map.get($root_colors, $color-name)
+    @return map-get($root_colors, $color-name);
 };
