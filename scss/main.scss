@@ -1,13 +1,34 @@
 @import "resets", "colours", "placeholders";
 @import "/dist/css/fonts.css";
 
+main {
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     padding: 14px 0;
     width: 100%;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); 
+    background-color: #FFF;
 
     &__title {
         @extend %title-styles;
         text-align: center;
+    }
+}
+
+.location-section {
+    @extend %flex-container; 
+    color: $grey-1;
+    background-color: $grey-2;
+    padding: 12px 0;
+    margin-top: 56px;
+
+    i {
+        margin-right: 15px;
     }
 }
