@@ -1,2 +1,13 @@
-@import "resets", "variables";
-@import "/dist/css/fonts.css"
+@import "resets", "colours", "placeholders";
+@import "/dist/css/fonts.css";
+
+.nav {
+    padding: 14px 0;
+    width: 100%;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); 
+
+    &__title {
+        @extend %title-styles;
+        text-align: center;
+    }
+}
