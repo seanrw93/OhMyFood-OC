@@ -5,7 +5,10 @@
 }
 
 %gradient-button {
+    position: relative;
     background: linear-gradient(to bottom, $secondary, $primary);
+    background-size: 50% 100%;
+    transition: background-position 1s ease; 
     color: #FFF;
     height: 50px;
     font-size: 13px;
@@ -15,4 +18,9 @@
     outline: none;
     padding: 0 13px;
     letter-spacing: 1px;
+    cursor: pointer;
+
+        &:hover {
+            background-size: 100% 200%;
+        }
 }
