@@ -4,8 +4,15 @@
     color: #000;
 }
 
-%flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center ;
+%gradient-button {
+    background: linear-gradient(to bottom, $secondary, $primary);
+    color: #FFF;
+    height: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 0 13px;
+    letter-spacing: 1px;
 }

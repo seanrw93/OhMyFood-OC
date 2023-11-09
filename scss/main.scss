@@ -1,4 +1,4 @@
-@import "resets", "colours", "placeholders";
+@import "resets", "colours", "placeholders", "mixins";
 @import "/dist/css/fonts.css";
 
 main {
@@ -22,7 +22,7 @@ main {
 }
 
 .location-section {
-    @extend %flex-container; 
+    @include flex-container(center, center); 
     color: $grey-1;
     background-color: $grey-2;
     padding: 12px 0;
@@ -30,5 +30,34 @@ main {
 
     i {
         margin-right: 15px;
+    }
+}
+
+.explore-section {
+    @include flex-container(center, center);
+    text-align: center;
+    flex-direction: column;
+    padding: 30px 20px;
+    height: auto;
+    width: 100%;
+    background-color: $grey-3;
+    line-height: 1.5;
+
+    & > *:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: 900;
+    } 
+
+    h2 {
+        font-size: 13px;
+        color: $grey-1;
+    }
+
+    button {
+        @extend %gradient-button;
     }
 }

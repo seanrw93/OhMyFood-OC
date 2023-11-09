@@ -52,6 +52,7 @@ input {
   --tertiary: #99E2D0;
   --grey-1: #353535;
   --grey-2: #EAEAEA;
+  --grey-3: #F6F6F6;
 }
 
 .nav__title {
@@ -60,10 +61,17 @@ input {
   color: #000;
 }
 
-.location-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.explore-section button {
+  background: linear-gradient(to bottom, var(--secondary), var(--primary));
+  color: #FFF;
+  height: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  padding: 0 13px;
+  letter-spacing: 1px;
 }
 
 main {
@@ -85,6 +93,9 @@ main {
 }
 
 .location-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--grey-1);
   background-color: var(--grey-2);
   padding: 12px 0;
@@ -92,4 +103,28 @@ main {
 }
 .location-section i {
   margin-right: 15px;
+}
+
+.explore-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 30px 20px;
+  height: auto;
+  width: 100%;
+  background-color: var(--grey-3);
+  line-height: 1.5;
+}
+.explore-section > *:not(:last-child) {
+  margin-bottom: 18px;
+}
+.explore-section h1 {
+  font-size: 20px;
+  font-weight: 900;
+}
+.explore-section h2 {
+  font-size: 13px;
+  color: var(--grey-1);
 }/*# sourceMappingURL=main.css.map */
