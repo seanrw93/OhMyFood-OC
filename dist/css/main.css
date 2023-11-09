@@ -128,11 +128,11 @@ main {
 .explore-section > *:not(:last-child) {
   margin-bottom: 18px;
 }
-.explore-section h1 {
+.explore-section h2 {
   font-size: 20px;
   font-weight: 900;
 }
-.explore-section h2 {
+.explore-section p {
   font-size: 13px;
   color: var(--grey-1);
 }/*# sourceMappingURL=main.css.map */
