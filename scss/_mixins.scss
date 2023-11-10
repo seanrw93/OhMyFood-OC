@@ -25,7 +25,7 @@
       }
     }
 
-    animation: slideIn $duration ease-in forwards $delay;
+    animation: slideIn $duration linear forwards $delay;
 }
 
 @mixin order($start, $end) {

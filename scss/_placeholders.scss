@@ -15,7 +15,7 @@
     position: relative;
     background: linear-gradient(to bottom, $secondary, $primary);
     background-size: 50% 100%;
-    transition: background-position 1s ease; 
+    transition: background-size 1s ease; 
     color: #FFF;
     height: 50px;
     font-size: 13px;
@@ -41,9 +41,6 @@
 };
 
 %footer-styles {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
     padding: 22px 25px;
     background: $grey-1;
