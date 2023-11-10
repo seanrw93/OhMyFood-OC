@@ -1,23 +1,22 @@
 @import "resets", "colours", "placeholders", "typography", "mixins";
-@import "/dist/css/fonts.css";
 
 main {
     font-family: $roboto;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
 } 
 
 .nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
     padding: 14px 0;
     width: 100%;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); 
+    @include box-shadow(2px, 4px, 0.15); 
     background-color: #FFF;
 
     &__title {
@@ -56,6 +55,7 @@ h2 {
     }
 
     button {
+        @include box-shadow(4px, 10px, 0.25);
         @extend %gradient-button;
     }
 }
@@ -63,4 +63,47 @@ h2 {
 .functionality-section {
     @include flex-container(center, center);
     @extend %section-styles;
+    counter-reset: order;
+    max-width: 322px;
+    margin: 0 auto;
+
+    .functionality-heading {
+        align-self: flex-start;
+        margin-bottom: 20px;
+       
+    }
+
+    .functionality-card {
+        @include flex-container(flex-start, center);
+        @include box-shadow(4px, 15px, 0.15);
+        position: relative;
+        background-color: $grey-3;
+        width: 95%;
+        padding: 25px;
+        border-radius: 20px;
+        
+
+        &::before {
+            @include flex-container(center, center);
+            content: counter(order);
+            counter-increment: order;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: $primary;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #FFF;
+        }
+
+        &__text i {
+            margin-right: 15px;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 25px;
+        }
+    }
 }

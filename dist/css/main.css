@@ -56,7 +56,7 @@ input {
 }
 
 .nav__title {
-  font-family: shrikland;
+  font-family: "Shrikland", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 28px;
   color: #000;
 }
@@ -99,18 +99,18 @@ main {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 900;
 }
 
 .nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   padding: 14px 0;
   width: 100%;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #FFF;
 }
 .nav__title {
@@ -145,8 +145,52 @@ h2 {
   font-size: 13px;
   color: var(--grey-1);
 }
+.explore-section button {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
 .functionality-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  counter-reset: order;
+  max-width: 322px;
+  margin: 0 auto;
+}
+.functionality-section .functionality-heading {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+.functionality-section .functionality-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  background-color: var(--grey-3);
+  width: 95%;
+  padding: 25px;
+  border-radius: 20px;
+}
+.functionality-section .functionality-card::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: counter(order);
+  counter-increment: order;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary);
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+}
+.functionality-section .functionality-card__text i {
+  margin-right: 15px;
+}
+.functionality-section .functionality-card:not(:last-of-type) {
+  margin-bottom: 25px;
 }/*# sourceMappingURL=main.css.map */

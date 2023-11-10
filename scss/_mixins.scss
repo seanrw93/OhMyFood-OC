@@ -4,4 +4,8 @@
     align-items: $align;
 }
 
+@mixin box-shadow($vert, $blur, $opacity) {
+    box-shadow: 0 $vert $blur 0 rgba(0, 0, 0, $opacity);
+}
+
 
