@@ -4,6 +4,13 @@
     color: #000;
 }
 
+%h2-styles {
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 %gradient-button {
     position: relative;
     background: linear-gradient(to bottom, $secondary, $primary);

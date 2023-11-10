@@ -5,8 +5,7 @@ main {
 }
 
 h2 {
-    font-size: 22px;
-    font-weight: 900;
+    @extend %h2-styles;
 } 
 
 .nav {
@@ -71,8 +70,6 @@ h2 {
 
     .functionality-heading {
         align-self: flex-start;
-        margin-bottom: 20px;
-       
     }
 
     .functionality-card {
