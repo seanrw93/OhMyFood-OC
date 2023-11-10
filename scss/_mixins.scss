@@ -31,7 +31,7 @@
 @mixin order($start, $end) {
     @for $i from $start through $end {
         &.order-#{$i} {
-            @include slide-in-animation(0.8s, 0.2s + (0.2s * $i))
+            @include slide-in-animation(0.8s, 0.1s + (0.2s * $i))
         }
     }
 }
