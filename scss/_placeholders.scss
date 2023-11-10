@@ -22,5 +22,13 @@
 
         &:hover {
             background-size: 100% 200%;
-        }
-}
+        };
+};
+
+%section-styles {
+    text-align: center;
+    flex-direction: column;
+    padding: 30px 20px;
+    height: auto;
+    width: 100%;
+};
