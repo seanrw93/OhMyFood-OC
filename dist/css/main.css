@@ -73,7 +73,7 @@ input {
   position: relative;
   background: linear-gradient(to bottom, var(--secondary), var(--primary));
   background-size: 50% 100%;
-  transition: background-size 1s ease;
+  transition: background-size 0.5s ease;
   color: #FFF;
   height: 50px;
   font-size: 13px;
@@ -87,6 +87,9 @@ input {
 }
 .explore-section button:hover {
   background-size: 100% 200%;
+}
+.explore-section button:active {
+  transform: scale(0.95);
 }
 
 .functionality-section, .explore-section {
