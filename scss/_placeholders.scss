@@ -39,3 +39,14 @@
     height: auto;
     width: 100%;
 };
+
+%footer-styles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 25px;
+    background: $grey-1;
+    color: white;
+    height: auto;
+}
