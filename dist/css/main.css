@@ -53,6 +53,7 @@ input {
   --grey-1: #353535;
   --grey-2: #EAEAEA;
   --grey-3: #F6F6F6;
+  --grey-4: #7E7E7E;
 }
 
 .nav__title {
@@ -99,7 +100,7 @@ main {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 900;
 }
 
@@ -137,6 +138,7 @@ h2 {
   align-items: center;
   background-color: var(--grey-3);
   line-height: 1.5;
+  margin-bottom: 15px;
 }
 .explore-section > *:not(:last-child) {
   margin-bottom: 18px;
@@ -147,6 +149,7 @@ h2 {
 }
 .explore-section button {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  margin: 15px 0;
 }
 
 .functionality-section {
@@ -171,6 +174,58 @@ h2 {
   width: 95%;
   padding: 25px;
   border-radius: 20px;
+  opacity: 0;
+}
+.functionality-section .functionality-card.order-1 {
+  animation: slideIn 0.8s ease-in forwards 0.2s;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.functionality-section .functionality-card.order-2 {
+  animation: slideIn 0.8s ease-in forwards 0.4s;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.functionality-section .functionality-card.order-3 {
+  animation: slideIn 0.8s ease-in forwards 0.6s;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .functionality-section .functionality-card::before {
   display: flex;
@@ -188,8 +243,14 @@ h2 {
   transform: translateY(-50%);
   color: #FFF;
 }
-.functionality-section .functionality-card__text i {
-  margin-right: 15px;
+.functionality-section .functionality-card i {
+  color: var(--grey-4);
+}
+.functionality-section .functionality-card__text {
+  margin-left: 10px;
+  align-self: flex-end;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 .functionality-section .functionality-card:not(:last-of-type) {
   margin-bottom: 25px;
