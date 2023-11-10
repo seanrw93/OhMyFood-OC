@@ -121,10 +121,7 @@ main {
     @extend %footer-styles;
 
     h2 {
-        @extend %h2-styles;
-        @extend %title-styles;
+        font-family: $shrikhand;
         color: #FFF;
-        text-align: unset;
-        margin: 0;
     }
 }
