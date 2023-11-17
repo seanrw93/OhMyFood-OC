@@ -4,6 +4,12 @@
     align-items: $align;
 }
 
+@mixin min-width($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
 @mixin box-shadow($vert, $blur, $opacity) {
     box-shadow: 0 $vert $blur 0 rgba(0, 0, 0, $opacity);
 }

@@ -3,13 +3,16 @@
     --primary: #9356DC;
     --secondary: #FF79DA;
     --tertiary: #99E2D0;
+
     --grey-1: #353535;
     --grey-2: #EAEAEA;
     --grey-3: #F6F6F6;
     --grey-4: #7E7E7E;
+
+    --green-font: #008766;
 };
 
-//variables
+//customs
 $primary: var(--primary);
 $secondary: var(--secondary);
 $tertiary: var(--tertiary);
@@ -18,4 +21,6 @@ $grey-1: var(--grey-1);
 $grey-2: var(--grey-2);
 $grey-3: var(--grey-3);
 $grey-4: var(--grey-4);
+
+$green-font: var(--green-font)
 

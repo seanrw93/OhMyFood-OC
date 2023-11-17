@@ -51,3 +51,12 @@
     color: white;
     height: auto;
 }
+
+%menu-item-card {
+    position: relative;
+    background-color: $grey-3;
+    width: 95%;
+    padding: 25px;
+    border-radius: 20px;
+    opacity: 0;
+}
