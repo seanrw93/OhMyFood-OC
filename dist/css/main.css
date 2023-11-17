@@ -62,7 +62,7 @@ input {
   color: #000;
 }
 
-.functionality-section .functionality-heading, .explore-section h2 {
+.restaurants-section__heading, .functionality-section .functionality-heading, .explore-section h2 {
   font-size: 22px;
   font-weight: 900;
   text-align: center;
@@ -92,7 +92,7 @@ input {
   transform: scale(0.95);
 }
 
-.functionality-section, .explore-section {
+.restaurants-section, .functionality-section, .explore-section {
   text-align: center;
   flex-direction: column;
   padding: 30px 20px;
@@ -170,8 +170,6 @@ main {
   justify-content: center;
   align-items: center;
   counter-reset: order;
-  max-width: 322px;
-  margin: 0 auto;
 }
 .functionality-section .functionality-heading {
   align-self: flex-start;
@@ -266,6 +264,57 @@ main {
 }
 .functionality-section .functionality-card:not(:last-of-type) {
   margin-bottom: 25px;
+}
+
+.restaurants-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--grey-2);
+}
+.restaurants-section__heading {
+  align-self: flex-start;
+}
+.restaurants-section .restaurant-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  width: 95%;
+  margin: 0 auto;
+  max-width: 490px;
+  border-radius: 15px;
+}
+.restaurants-section .restaurant-card:not(:last-of-type) {
+  margin-bottom: 18px;
+}
+.restaurants-section .restaurant-card__image {
+  flex: 1;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  max-height: 200px;
+  width: 100%;
+}
+.restaurants-section .restaurant-card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 14px;
+}
+.restaurants-section .restaurant-card__info .card-text {
+  text-align: left;
+}
+.restaurants-section .restaurant-card__info .card-text p:first-of-type {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.restaurants-section .restaurant-card__info .card-text p:last-of-type {
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .footer h2 {

@@ -8,6 +8,16 @@
     box-shadow: 0 $vert $blur 0 rgba(0, 0, 0, $opacity);
 }
 
+@mixin font-size-weight($size, $weight) {
+  $font: (
+    "size": $size,
+    "weight": $weight
+  );
+
+  font-size: map-get($font, "size");
+  font-weight: map-get($font, "weight");
+}
+
 
 @mixin slide-in-animation($duration, $delay) {
     @keyframes slideIn {

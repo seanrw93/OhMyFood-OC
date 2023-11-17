@@ -64,8 +64,6 @@ main {
     @include flex-container(center, center);
     @extend %section-styles;
     counter-reset: order;
-    max-width: 322px;
-    margin: 0 auto;
 
     .functionality-heading {
         @extend %h2-styles;
@@ -115,6 +113,60 @@ main {
             margin-bottom: 25px;
         }
     }
+}
+
+.restaurants-section {
+    @extend %section-styles;
+    @include flex-container(center, center);
+    background: $grey-2;
+
+    &__heading {
+        @extend %h2-styles;
+        align-self: flex-start
+    }
+
+    .restaurant-card {
+        @include flex-container(space-between, center);
+        flex-direction: column;
+        @include box-shadow(4px, 15px, 0.10);
+        width: 95%;
+        margin: 0 auto;
+        max-width: 490px;
+        border-radius: 15px;
+        
+        &:not(:last-of-type) {
+            margin-bottom: 18px;
+        }
+
+        &__image {
+            flex: 1;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            max-height: 200px;
+            width: 100%;
+        }
+
+        &__info {
+            @include flex-container(space-between, center);
+            flex-direction: row;
+            width: 100%;
+            padding: 14px;
+
+            .card-text {
+                text-align: left;
+
+                & p:first-of-type {
+                    @include font-size-weight(18px, 700);
+                    margin-bottom: 5px;
+                }
+
+                & p:last-of-type {
+                    @include font-size-weight(17px, 400);
+                }
+            }
+        }
+    }
+
 }
 
 .footer {
