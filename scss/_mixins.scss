@@ -51,3 +51,27 @@
         }
     }
 }
+
+@mixin fill-animation($to-color) {
+  @keyframes fillAnimation {
+    0% {
+      fill: none;
+      stroke: #000;
+      opacity: 1
+    }
+
+    50% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+
+    100% {
+      stroke: none;
+      fill: $to-color;
+      opacity: 1;
+      transform: scale(1)
+    }
+  }
+
+  animation: fillAnimation 0.6s forwards ease;
+}

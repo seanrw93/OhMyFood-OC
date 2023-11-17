@@ -342,13 +342,30 @@ main {
 .restaurants-section .restaurant-card__info .heart path {
   stroke: black;
   fill: none;
+  transition: fill 0.5s ease;
 }
 .restaurants-section .restaurant-card__info .heart input[type=checkbox] {
   display: none;
 }
-.restaurants-section .restaurant-card__info .heart input[type=checkbox]:checked ~ svg path, .restaurants-section .restaurant-card__info .heart:hover {
-  stroke: none;
-  fill: url(#paint0_linear_25368_712);
+.restaurants-section .restaurant-card__info .heart input[type=checkbox]:checked ~ svg path, .restaurants-section .restaurant-card__info .heart input[type=checkbox]:hover {
+  animation: fillAnimation 0.6s forwards ease;
+}
+@keyframes fillAnimation {
+  0% {
+    fill: none;
+    stroke: #000;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    stroke: none;
+    fill: url(#paint0_linear_25368_712);
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .restaurants-section .restaurant-card:nth-child(-n+3)::before {
   content: "New";

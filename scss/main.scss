@@ -182,17 +182,16 @@ main {
                 path {
                     stroke: black;
                     fill: none;
+                    transition: fill 0.5s ease;
                 }
 
                 input[type="checkbox"] {
                     display: none;
+                    
+                    &:checked ~ svg path, &:hover {
+                        @include fill-animation(url(#paint0_linear_25368_712));
+                    }
                 }
-
-                input[type="checkbox"]:checked ~ svg path, &:hover {
-                    stroke: none;
-                    fill: url(#paint0_linear_25368_712);
-                }
-
             }
         }
 
