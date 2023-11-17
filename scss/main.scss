@@ -164,6 +164,27 @@ main {
                     @include font-size-weight(17px, 400);
                 }
             }
+
+            .heart {
+                path {
+                    stroke: black;
+                    fill: none;
+                }
+
+                label {
+                    cursor: pointer;
+                }
+
+                input[type="checkbox"] {
+                    display: none;
+                }
+
+                input[type="checkbox"]:checked ~ svg path, &:hover {
+                    stroke: none;
+                    fill: url(#paint0_linear_25368_712);
+                }
+
+            }
         }
     }
 

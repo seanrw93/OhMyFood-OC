@@ -316,6 +316,20 @@ main {
   font-size: 17px;
   font-weight: 400;
 }
+.restaurants-section .restaurant-card__info .heart path {
+  stroke: black;
+  fill: none;
+}
+.restaurants-section .restaurant-card__info .heart label {
+  cursor: pointer;
+}
+.restaurants-section .restaurant-card__info .heart input[type=checkbox] {
+  display: none;
+}
+.restaurants-section .restaurant-card__info .heart input[type=checkbox]:checked ~ svg path, .restaurants-section .restaurant-card__info .heart:hover {
+  stroke: none;
+  fill: url(#paint0_linear_25368_712);
+}
 
 .footer h2 {
   font-family: var(--Shrikhand);
