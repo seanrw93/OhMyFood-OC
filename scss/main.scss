@@ -216,5 +216,26 @@ main {
     h2 {
         font-family: $shrikhand;
         color: #FFF;
+        margin-bottom: 15px;
+    }
+
+    &__links {
+        @include font-size-weight(13px, 500);
+        font-family: $roboto;
+
+        & > *:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        & div {
+            @include flex-container(flex-start, center);
+            &:first-of-type p {
+                margin-left: 13px;
+            }
+
+            &:last-of-type p {
+                margin-left: 8px;
+            }
+        }
     }
 }
