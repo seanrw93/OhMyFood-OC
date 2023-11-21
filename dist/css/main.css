@@ -68,7 +68,7 @@ input {
   color: #000;
 }
 
-.restaurants-section__heading, .functionality-section .functionality-heading, .explore-section h2 {
+.restaurants-section__heading, .instructions-section .instructions-heading, .explore-section h2 {
   font-size: 22px;
   font-weight: 900;
   text-align: center;
@@ -98,7 +98,7 @@ input {
   transform: scale(0.95);
 }
 
-.restaurants-section, .functionality-section, .explore-section {
+.restaurants-section, .instructions-section, .explore-section {
   text-align: center;
   flex-direction: column;
   padding: 30px 20px;
@@ -113,7 +113,7 @@ input {
   color: white;
 }
 
-.functionality-section .functionality-card {
+.instructions-section .instructions-card {
   position: relative;
   background-color: var(--grey-3);
   width: 95%;
@@ -178,23 +178,23 @@ main {
   margin: 15px 0;
 }
 
-.functionality-section {
+.instructions-section {
   display: flex;
   justify-content: center;
   align-items: center;
   counter-reset: order;
   width: 100%;
 }
-.functionality-section .functionality-heading {
+.instructions-section .instructions-heading {
   align-self: flex-start;
 }
-.functionality-section .functionality-card {
+.instructions-section .instructions-card {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
-.functionality-section .functionality-card.order-1 {
+.instructions-section .instructions-card.order-1 {
   animation: slideIn 0.8s linear forwards 0.3s;
 }
 @keyframes slideIn {
@@ -211,7 +211,7 @@ main {
     transform: translateY(0);
   }
 }
-.functionality-section .functionality-card.order-2 {
+.instructions-section .instructions-card.order-2 {
   animation: slideIn 0.8s linear forwards 0.5s;
 }
 @keyframes slideIn {
@@ -228,7 +228,7 @@ main {
     transform: translateY(0);
   }
 }
-.functionality-section .functionality-card.order-3 {
+.instructions-section .instructions-card.order-3 {
   animation: slideIn 0.8s linear forwards 0.7s;
 }
 @keyframes slideIn {
@@ -245,7 +245,7 @@ main {
     transform: translateY(0);
   }
 }
-.functionality-section .functionality-card::before {
+.instructions-section .instructions-card::before {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,16 +261,16 @@ main {
   transform: translateY(-50%);
   color: #FFF;
 }
-.functionality-section .functionality-card i {
+.instructions-section .instructions-card i {
   color: var(--grey-4);
 }
-.functionality-section .functionality-card__text {
+.instructions-section .instructions-card__text {
   margin-left: 10px;
   align-self: flex-end;
   font-size: 0.9rem;
   font-weight: 600;
 }
-.functionality-section .functionality-card:not(:last-of-type) {
+.instructions-section .instructions-card:not(:last-of-type) {
   margin-bottom: 25px;
 }
 

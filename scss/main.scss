@@ -59,18 +59,18 @@ main {
     }
 }
 
-.functionality-section {
+.instructions-section {
     @include flex-container(center, center);
     @extend %section-styles;
     counter-reset: order;
     width: 100%;
 
-    .functionality-heading {
+    .instructions-heading {
         @extend %h2-styles;
         align-self: flex-start;
     }
 
-    .functionality-card {
+    .instructions-card {
         @include flex-container(flex-start, center);
         @include box-shadow(4px, 15px, 0.15);
         @extend %menu-item-card;
