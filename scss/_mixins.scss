@@ -75,3 +75,17 @@
 
   animation: fillAnimation 0.6s forwards ease;
 }
+
+@mixin fade-in-animation($duration, $effect) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation: fadeIn $duration $effect;
+}
