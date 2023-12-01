@@ -21,3 +21,146 @@
         object-fit: cover;
     }
 }
+
+.menu-container {
+    @include flex-container(center, center);
+    flex-direction: column;
+    height: 100%;
+    max-width: 1055px;
+    padding: 32px 17px;
+    margin: -30px auto 0 auto;
+    background-color: $grey-3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+    z-index: 2;
+
+    & > *:not(.order-button) {
+        width: 100%;
+    }
+
+    &__name {
+        @include flex-container(space-between, center);
+        flex-direction: row;
+        margin-bottom: 40px;
+
+        h2 {
+            @extend %title-styles;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        .heart {
+            @extend %heart-checkbox-styles;
+            
+            input {
+                &:checked ~ svg path, &:hover {
+                    @include fill-animation(url(#paint0_linear_25368_712));
+                }
+            }
+        }
+    }
+
+    .food-section {
+        h2 {
+            position: relative;
+            margin-bottom: 20px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                width: 40px;
+                height: 3px;
+                background-color: $tertiary;
+            }
+        }
+
+        & .menu-item-card {
+                @include box-shadow(4px, 15px, 0.10);
+                @include flex-container(space-between, center);
+                position: relative;
+                width: 100%;
+                padding: 15px;
+                border-radius: 15px;
+                margin-bottom: 12px;
+
+                input[type="checkbox"] {
+                    position: absolute;
+                    top: -3px;
+                    bottom: 0;
+                    left: -4px;
+                    right: 0;
+                    z-index: 2;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                }
+
+                input[type="checkbox"]:checked ~ &__meal-check {
+                    right: 0;
+
+                    svg {
+                        #icon-check {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+
+                &__meal-check {
+                    position: absolute;
+                    height: 100%;
+                    right: 0px;
+                    object-fit: cover;
+                    transition: right linear 200ms;
+
+                    svg {
+                        #icon-check {
+                            transition: transform linear 200ms
+                        }
+                    }
+                }
+
+                &__info {
+                    @include flex-container(space-between, flex-end);
+                    flex: 1;
+
+                    .item-text {
+                        &--ellipsis {
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        p {
+                            font-size: 16px;
+
+                            &:first-of-type {
+                                @include font-size-weight(16px, 600);
+                                margin-bottom: 6px;
+                            }
+                        }
+                    }
+
+                    .item-price {
+                        p {
+                            @include font-size-weight(16px, 600)
+                        }
+                    }
+            
+                }
+
+                &:last-of-type {
+                    margin-bottom: 40px;
+                }
+        }     
+    }
+
+    .order-button {
+        @extend %gradient-button;
+        width: 186px;
+    }
+}

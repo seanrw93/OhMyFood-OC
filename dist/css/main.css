@@ -62,7 +62,7 @@ input {
   --green-font: #008766;
 }
 
-.nav__title {
+.nav__title, .menu-container__name h2 {
   font-family: "shrikhand", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 28px;
   color: #000;
@@ -75,7 +75,7 @@ input {
   margin-bottom: 20px;
 }
 
-.explore-section button {
+.explore-section button, .menu-container .order-button {
   position: relative;
   background: linear-gradient(to bottom, var(--secondary), var(--primary));
   background-size: 50% 100%;
@@ -91,10 +91,10 @@ input {
   letter-spacing: 1px;
   cursor: pointer;
 }
-.explore-section button:hover {
+.explore-section button:hover, .menu-container .order-button:hover {
   background-size: 100% 200%;
 }
-.explore-section button:active {
+.explore-section button:active, .menu-container .order-button:active {
   transform: scale(0.95);
 }
 
@@ -122,12 +122,12 @@ input {
   opacity: 0;
 }
 
-.restaurants-section .restaurant-card__info .heart path {
+.restaurants-section .restaurant-card__info .heart path, .menu-container__name .heart path {
   stroke: black;
   fill: none;
   transition: fill 0.5s ease;
 }
-.restaurants-section .restaurant-card__info .heart input[type=checkbox] {
+.restaurants-section .restaurant-card__info .heart input[type=checkbox], .menu-container__name .heart input[type=checkbox] {
   display: none;
   user-select: none;
 }
@@ -165,6 +165,135 @@ input {
   to {
     opacity: 1;
   }
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1055px;
+  padding: 32px 17px;
+  margin: -30px auto 0 auto;
+  background-color: var(--grey-3);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  z-index: 2;
+}
+.menu-container > *:not(.order-button) {
+  width: 100%;
+}
+.menu-container__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+.menu-container__name label {
+  cursor: pointer;
+}
+.menu-container__name .heart input:checked ~ svg path, .menu-container__name .heart input:hover {
+  animation: fillAnimation 0.6s forwards ease;
+}
+@keyframes fillAnimation {
+  0% {
+    fill: none;
+    stroke: #000;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    stroke: none;
+    fill: url(#paint0_linear_25368_712);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.menu-container .food-section h2 {
+  position: relative;
+  margin-bottom: 20px;
+}
+.menu-container .food-section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--tertiary);
+}
+.menu-container .food-section .menu-item-card {
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+.menu-container .food-section .menu-item-card input[type=checkbox] {
+  position: absolute;
+  top: -3px;
+  bottom: 0;
+  left: -4px;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+input[type=checkbox]:checked ~ .menu-container .food-section .menu-item-card__meal-check {
+  right: 0;
+}
+input[type=checkbox]:checked ~ .menu-container .food-section .menu-item-card__meal-check svg #icon-check {
+  transform: rotate(360deg);
+}
+.menu-container .food-section .menu-item-card__meal-check {
+  position: absolute;
+  height: 100%;
+  right: 0px;
+  object-fit: cover;
+  transition: right linear 200ms;
+}
+.menu-container .food-section .menu-item-card__meal-check svg #icon-check {
+  transition: transform linear 200ms;
+}
+.menu-container .food-section .menu-item-card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex: 1;
+}
+.menu-container .food-section .menu-item-card__info .item-text--ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-container .food-section .menu-item-card__info .item-text p {
+  font-size: 16px;
+}
+.menu-container .food-section .menu-item-card__info .item-text p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.menu-container .food-section .menu-item-card__info .item-price p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.menu-container .food-section .menu-item-card:last-of-type {
+  margin-bottom: 40px;
+}
+.menu-container .order-button {
+  width: 186px;
 }
 
 main {
@@ -385,7 +514,7 @@ main {
 .restaurants-section .restaurant-card__info label {
   cursor: pointer;
 }
-.restaurants-section .restaurant-card__info .heart:checked ~ svg path, .restaurants-section .restaurant-card__info .heart:hover {
+.restaurants-section .restaurant-card__info .heart input:checked ~ svg path, .restaurants-section .restaurant-card__info .heart input:hover {
   animation: fillAnimation 0.6s forwards ease;
 }
 @keyframes fillAnimation {
@@ -400,7 +529,7 @@ main {
   }
   100% {
     stroke: none;
-    fill: url(#paint0_linear_25368_712);
+    fill: url("#paint0_linear_25368_712");
     opacity: 1;
     transform: scale(1);
   }

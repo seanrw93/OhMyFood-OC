@@ -189,12 +189,15 @@ main {
             .heart {
                 @extend %heart-checkbox-styles;
                     
+                input {
                     &:checked ~ svg path, &:hover {
-                        @include fill-animation(url(#paint0_linear_25368_712));
+                        @include fill-animation(url("#paint0_linear_25368_712"));
                     }
                 }
+                    
             }
         }
+    }
 
         &:nth-child(-n + 3)::before {
             content: "New";
