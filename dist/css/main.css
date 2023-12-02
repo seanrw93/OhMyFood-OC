@@ -241,7 +241,7 @@ input {
   margin-bottom: 12px;
 }
 .menu-container .food-section .menu-item-card--order-1 {
-  animation: slideIn 0.8s linear forwards 0.3s;
+  animation: slideIn 0.5s linear forwards 0.3s;
 }
 @keyframes slideIn {
   0% {
@@ -258,7 +258,7 @@ input {
   }
 }
 .menu-container .food-section .menu-item-card--order-2 {
-  animation: slideIn 0.8s linear forwards 0.5s;
+  animation: slideIn 0.5s linear forwards 0.5s;
 }
 @keyframes slideIn {
   0% {
@@ -275,7 +275,7 @@ input {
   }
 }
 .menu-container .food-section .menu-item-card--order-3 {
-  animation: slideIn 0.8s linear forwards 0.7s;
+  animation: slideIn 0.5s linear forwards 0.7s;
 }
 @keyframes slideIn {
   0% {
@@ -292,7 +292,7 @@ input {
   }
 }
 .menu-container .food-section .menu-item-card--order-4 {
-  animation: slideIn 0.8s linear forwards 0.9s;
+  animation: slideIn 0.5s linear forwards 0.9s;
 }
 @keyframes slideIn {
   0% {
@@ -433,7 +433,7 @@ main {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 .instructions-section .instructions-card--order-1 {
-  animation: slideIn 0.8s linear forwards 0.3s;
+  animation: slideIn 0.5s linear forwards 0.3s;
 }
 @keyframes slideIn {
   0% {
@@ -450,7 +450,7 @@ main {
   }
 }
 .instructions-section .instructions-card--order-2 {
-  animation: slideIn 0.8s linear forwards 0.5s;
+  animation: slideIn 0.5s linear forwards 0.5s;
 }
 @keyframes slideIn {
   0% {
@@ -467,7 +467,7 @@ main {
   }
 }
 .instructions-section .instructions-card--order-3 {
-  animation: slideIn 0.8s linear forwards 0.7s;
+  animation: slideIn 0.5s linear forwards 0.7s;
 }
 @keyframes slideIn {
   0% {
