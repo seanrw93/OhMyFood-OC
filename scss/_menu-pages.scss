@@ -85,8 +85,12 @@
                 position: relative;
                 width: 100%;
                 padding: 15px;
+                opacity: 0;
                 border-radius: 15px;
                 margin-bottom: 12px;
+
+                //animation
+                @include order(1, 4);
 
                 input[type="checkbox"] {
                     position: absolute;
