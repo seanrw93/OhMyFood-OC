@@ -79,7 +79,7 @@
             }
         }
 
-        & .menu-item-card {
+        .menu-item-card {
                 @include box-shadow(4px, 15px, 0.10);
                 @include flex-container(space-between, center);
                 position: relative;
@@ -88,11 +88,12 @@
                 opacity: 0;
                 border-radius: 15px;
                 margin-bottom: 12px;
+                overflow: hidden;
 
                 //animation
                 @include order(1, 4);
 
-                input[type="checkbox"] {
+                & > input[type="checkbox"] {
                     position: absolute;
                     top: -3px;
                     bottom: 0;
@@ -105,7 +106,7 @@
                     cursor: pointer;
                 }
 
-                input[type="checkbox"]:checked ~ &__meal-check {
+                input[type="checkbox"]:checked ~ .menu-item-card__meal-check {
                     right: 0;
 
                     svg {
@@ -115,10 +116,17 @@
                     }
                 }
 
+                input[type="checkbox"]:checked ~ .menu-item-card__info {
+                    
+                    .item-price {
+                        margin-right: 60px;
+                    }
+                }
+
                 &__meal-check {
                     position: absolute;
                     height: 100%;
-                    right: 0px;
+                    right: -60px;
                     object-fit: cover;
                     transition: right linear 200ms;
 
@@ -150,8 +158,10 @@
                     }
 
                     .item-price {
+                        transition: margin-right linear 200ms;
+
                         p {
-                            @include font-size-weight(16px, 600)
+                            @include font-size-weight(16px, 600);
                         }
                     }
             
