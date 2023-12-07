@@ -65,6 +65,7 @@
             @extend %heart-checkbox-styles;
                 
             input {
+
                 & ~ svg path {
                     fill: none;
                     stroke: #000;
@@ -130,7 +131,7 @@
                     & ~ .menu-item-card__meal-check {
                         svg {
                                 transform: rotate(359deg); 
-                                transition: transform 200ms linear
+                                transition: transform 400ms linear
                         }
                     }
                 }
@@ -161,7 +162,7 @@
                     height: 100%;
                     right: -60px;
                     object-fit: cover;
-                    transition: right linear 200ms;
+                    transition: right linear 400ms;
                 }
 
                 &__info {
@@ -192,7 +193,7 @@
                     }
 
                     .item-price {
-                        transition: margin-right linear 200ms;
+                        transition: margin-right linear 400ms;
 
                         p {
                             @include font-size-weight(16px, 600);

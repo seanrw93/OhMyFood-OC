@@ -219,7 +219,7 @@ input {
   stroke: #000;
 }
 .menu-container__name .heart input:checked ~ svg path {
-  animation: fillAnimation 0.6s linear;
+  animation: fillAnimation 0.6s forwards;
 }
 @keyframes fillAnimation {
   0% {
@@ -237,12 +237,12 @@ input {
   }
 }
 .menu-container__name .heart input:not(:checked) ~ svg path {
-  animation: unfillAnimation 0.6s linear;
+  animation: unfillAnimation 0.6s forwards;
 }
 @keyframes unfillAnimation {
   0% {
-    fill: inherit;
-    stroke: none;
+    fill: url("#paint0_linear_25368_712");
+    stroke: #000;
     opacity: 1;
   }
   50% {
@@ -367,7 +367,7 @@ input {
 }
 .menu-container .food-section .menu-item-card > input[type=checkbox] ~ .menu-item-card__meal-check svg {
   transform: rotate(359deg);
-  transition: transform 200ms linear;
+  transition: transform 400ms linear;
 }
 .menu-container .food-section .menu-item-card__meal-check {
   display: flex;
@@ -390,7 +390,7 @@ input {
   height: 100%;
   right: -60px;
   object-fit: cover;
-  transition: right linear 200ms;
+  transition: right linear 400ms;
 }
 .menu-container .food-section .menu-item-card__info {
   display: flex;
@@ -416,7 +416,7 @@ input {
   margin-bottom: 6px;
 }
 .menu-container .food-section .menu-item-card__info .item-price {
-  transition: margin-right linear 200ms;
+  transition: margin-right linear 400ms;
 }
 .menu-container .food-section .menu-item-card__info .item-price p {
   font-size: 16px;
@@ -681,7 +681,7 @@ main {
   stroke: #000;
 }
 .restaurants-section .restaurant-card__info .heart input:checked ~ svg path {
-  animation: fillAnimation 0.6s linear;
+  animation: fillAnimation 0.6s forwards;
 }
 @keyframes fillAnimation {
   0% {
@@ -699,12 +699,12 @@ main {
   }
 }
 .restaurants-section .restaurant-card__info .heart input:not(:checked) ~ svg path {
-  animation: unfillAnimation 0.6s linear;
+  animation: unfillAnimation 0.6s forwards;
 }
 @keyframes unfillAnimation {
   0% {
-    fill: inherit;
-    stroke: none;
+    fill: url("#paint0_linear_25368_712");
+    stroke: #000;
     opacity: 1;
   }
   50% {

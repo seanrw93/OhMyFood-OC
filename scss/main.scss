@@ -216,11 +216,12 @@ main {
                 @extend %heart-checkbox-styles;
                     
                 input {
+
                     & ~ svg path {
                         fill: none;
                         stroke: #000;
                     }
-
+                
                     &:checked ~ svg path {
                         @include fill-animation(url("#paint0_linear_25368_712"));
                     }
