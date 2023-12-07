@@ -66,9 +66,20 @@ main {
     counter-reset: order;
     width: 100%;
 
+    @include min-width(60em) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .instructions-heading {
         @extend %h2-styles;
         align-self: flex-start;
+        margin-bottom: 40px;
+
+        @include min-width(35em) {
+            grid-column: span 3;
+            justify-self: flex-start;
+        }
     }
 
     .instructions-card {
@@ -115,7 +126,7 @@ main {
     @extend %section-styles;
     @include flex-container(center, center);
 
-    @include min-width(768px) {
+    @include min-width(60em) {
         display: grid;
         grid-template-rows: auto 1fr 1fr;
         grid-template-columns: 1fr 1fr;

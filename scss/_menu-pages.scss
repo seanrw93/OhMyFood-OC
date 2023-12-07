@@ -117,11 +117,13 @@
 
                 input[type="checkbox"]:checked ~ .menu-item-card__meal-check {
                     right: 0;
-                    transform-origin: right center; 
 
                     svg {
-                        #icon-check {
-                            transform: rotate(360deg);
+                        path {
+                            #icon-check {
+                                @include rotate-animation(360);
+                                transform-origin: right center;
+                            }
                         }
                     }
                 }
@@ -139,12 +141,6 @@
                     right: -60px;
                     object-fit: cover;
                     transition: right linear 200ms;
-
-                    svg {
-                        #icon-check {
-                            transition: transform linear 500ms;
-                        }
-                    }
                 }
 
                 &__info {

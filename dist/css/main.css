@@ -336,10 +336,15 @@ input {
 }
 .menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__meal-check {
   right: 0;
+}
+.menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__meal-check svg path #icon-check {
+  animation: rotate 200ms linear;
   transform-origin: right center;
 }
-.menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__meal-check svg #icon-check {
-  transform: rotate(360deg);
+@keyframes rotate {
+  to {
+    transform: rotate(360 deg);
+  }
 }
 .menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__info .item-price {
   margin-right: 60px;
@@ -350,9 +355,6 @@ input {
   right: -60px;
   object-fit: cover;
   transition: right linear 200ms;
-}
-.menu-container .food-section .menu-item-card__meal-check svg #icon-check {
-  transition: transform linear 500ms;
 }
 .menu-container .food-section .menu-item-card__info {
   display: flex;
@@ -451,8 +453,21 @@ main {
   counter-reset: order;
   width: 100%;
 }
+@media (min-width: 60em) {
+  .instructions-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .instructions-section .instructions-heading {
   align-self: flex-start;
+  margin-bottom: 40px;
+}
+@media (min-width: 35em) {
+  .instructions-section .instructions-heading {
+    grid-column: span 3;
+    justify-self: flex-start;
+  }
 }
 .instructions-section .instructions-card {
   display: flex;
@@ -546,7 +561,7 @@ main {
   align-items: center;
   background: var(--grey-2);
 }
-@media (min-width: 768px) {
+@media (min-width: 60em) {
   .restaurants-section {
     display: grid;
     grid-template-rows: auto 1fr 1fr;
