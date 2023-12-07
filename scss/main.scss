@@ -65,10 +65,16 @@ main {
     @extend %section-styles;
     counter-reset: order;
     width: 100%;
+    max-width: 1096px;
+    margin: 0 auto;
 
     @include min-width(60em) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        
+        &:not(:last-child) {
+            column-gap: 30px;
+        }
     }
 
     .instructions-heading {
@@ -86,6 +92,11 @@ main {
         @include flex-container(flex-start, center);
         @include box-shadow(4px, 15px, 0.15);
         @extend %instruction-card;
+
+        @include min-width(60em) {
+            align-self: flex-start;
+            margin-left: 10px;
+        }
 
         //animation
         @include order(1, 3);
@@ -125,11 +136,15 @@ main {
 .restaurants-section {
     @extend %section-styles;
     @include flex-container(center, center);
+    max-width: 1086px;
+    margin: 0 auto;
 
     @include min-width(60em) {
         display: grid;
         grid-template-rows: auto 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
     background: $grey-2;
 

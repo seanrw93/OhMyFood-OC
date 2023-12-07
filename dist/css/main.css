@@ -452,11 +452,16 @@ main {
   align-items: center;
   counter-reset: order;
   width: 100%;
+  max-width: 1096px;
+  margin: 0 auto;
 }
 @media (min-width: 60em) {
   .instructions-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .instructions-section:not(:last-child) {
+    column-gap: 30px;
   }
 }
 .instructions-section .instructions-heading {
@@ -474,6 +479,12 @@ main {
   justify-content: flex-start;
   align-items: center;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 60em) {
+  .instructions-section .instructions-card {
+    align-self: flex-start;
+    margin-left: 10px;
+  }
 }
 .instructions-section .instructions-card--order-1 {
   animation: slideIn 0.5s linear forwards 0.3s;
@@ -559,6 +570,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1086px;
+  margin: 0 auto;
   background: var(--grey-2);
 }
 @media (min-width: 60em) {
@@ -566,6 +579,8 @@ main {
     display: grid;
     grid-template-rows: auto 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 }
 .restaurants-section__heading {
