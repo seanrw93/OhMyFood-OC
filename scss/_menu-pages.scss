@@ -145,7 +145,6 @@
 
                 &__info {
                     @include flex-container(space-between, flex-end);
-                    flex: 1;
 
                     .item-text {
                         max-width: 80%;

@@ -360,7 +360,6 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  flex: 1;
 }
 .menu-container .food-section .menu-item-card__info .item-text {
   max-width: 80%;
