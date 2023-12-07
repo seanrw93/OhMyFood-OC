@@ -163,7 +163,7 @@
                             font-size: 16px;
 
                             &:first-of-type {
-                                @include font-size-weight(16px, 600);
+                                font-weight: 600;
                                 margin-bottom: 6px;
                             }
                         }
@@ -188,5 +188,6 @@
     .order-button {
         @extend %gradient-button;
         width: 186px;
+        margin: 40px 0;
     }
 }

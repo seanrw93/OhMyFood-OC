@@ -251,6 +251,7 @@ main {
         @include font-size-weight(13px, 500);
         font-family: $roboto;
 
+        
         & > *:not(:last-child) {
             margin-bottom: 10px;
         }
