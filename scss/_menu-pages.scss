@@ -41,8 +41,12 @@
 
     &__name {
         @include flex-container(space-between, center);
+        @include fade-in-animation(0.6s, forwards);
+        animation-delay: 0.3s;
+
         flex-direction: row;
         margin-bottom: 40px;
+        opacity: 0;
 
         @include min-width(35em) {
             @include flex-container(center, center);
@@ -59,12 +63,21 @@
 
         .heart {
             @extend %heart-checkbox-styles;
-            
+                
             input {
-                &:checked ~ svg path, &:hover {
-                    @include fill-animation(url(#paint0_linear_25368_712));
+                & ~ svg path {
+                    fill: none;
+                    stroke: #000;
                 }
-            }
+
+                &:checked ~ svg path {
+                    @include fill-animation(url("#paint0_linear_25368_712"));
+                }
+
+                &:not(:checked) ~ svg path {
+                    @include unfill-animation();
+                }
+            }  
         }
     }
 
