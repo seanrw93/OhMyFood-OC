@@ -350,6 +350,9 @@ input {
 .menu-container .food-section .menu-item-card__info .item-text {
   max-width: 80%;
 }
+.menu-container .food-section .menu-item-card__info .item-text--text-wrap {
+  text-wrap: wrap;
+}
 .menu-container .food-section .menu-item-card__info .item-text--ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;

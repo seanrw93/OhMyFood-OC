@@ -145,6 +145,10 @@
                     .item-text {
                         max-width: 80%;
 
+                        &--text-wrap {
+                            text-wrap: wrap;
+                        }
+
                         &--ellipsis {
                             text-overflow: ellipsis;
                             white-space: nowrap;
