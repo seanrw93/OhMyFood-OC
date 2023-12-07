@@ -168,6 +168,19 @@ main {
         margin: 20px auto;
         max-width: 490px;
         border-radius: 15px;
+
+        &:nth-of-type(-n + 2)::before {
+            content: "New";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 3;
+            background: $tertiary;
+            padding: 7px 20px;
+            color: $green-font;
+            border-radius: 2px;
+            @include box-shadow(2px, 4px, 0.15);
+        }
         
         &:not(:last-of-type) {
             margin-bottom: 18px;
@@ -234,17 +247,6 @@ main {
         }
     }
 
-        &:nth-child(-n + 3)::before {
-            content: "New";
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: $tertiary;
-            padding: 7px 20px;
-            color: $green-font;
-            border-radius: 2px;
-            @include box-shadow(2px, 4px, 0.15);
-        }
     }
 
 .footer {
