@@ -192,6 +192,14 @@ input {
   flex-direction: row;
   margin-bottom: 40px;
 }
+@media (min-width: 35em) {
+  .menu-container__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
 .menu-container__name label {
   cursor: pointer;
 }
@@ -214,6 +222,10 @@ input {
     opacity: 1;
     transform: scale(1);
   }
+}
+.menu-container .food-section {
+  max-width: 604px;
+  margin: 0 auto;
 }
 .menu-container .food-section h2 {
   position: relative;
@@ -239,6 +251,7 @@ input {
   opacity: 0;
   border-radius: 15px;
   margin-bottom: 12px;
+  background-color: #FFF;
   overflow: hidden;
 }
 .menu-container .food-section .menu-item-card--order-1 {

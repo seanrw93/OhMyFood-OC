@@ -44,6 +44,11 @@
         flex-direction: row;
         margin-bottom: 40px;
 
+        @include min-width(35em) {
+            @include flex-container(center, center);
+            gap: 20px;
+        }
+
         h2 {
             @extend %title-styles;
         }
@@ -64,6 +69,9 @@
     }
 
     .food-section {
+        max-width: 604px;
+        margin: 0 auto;
+
         h2 {
             position: relative;
             margin-bottom: 20px;
@@ -88,6 +96,7 @@
                 opacity: 0;
                 border-radius: 15px;
                 margin-bottom: 12px;
+                background-color: #FFF;
                 overflow: hidden;
 
                 //animation
