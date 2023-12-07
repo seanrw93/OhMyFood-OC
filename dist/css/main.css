@@ -360,6 +360,7 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  flex: 1;
 }
 .menu-container .food-section .menu-item-card__info .item-text {
   max-width: 80%;
@@ -369,7 +370,8 @@ input {
 }
 .menu-container .food-section .menu-item-card__info .item-text--ellipsis {
   text-overflow: ellipsis;
-  white-space: nowrap;
+  text-wrap: wrap;
+  height: 1em;
   overflow: hidden;
 }
 .menu-container .food-section .menu-item-card__info .item-text p {

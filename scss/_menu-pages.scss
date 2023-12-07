@@ -145,17 +145,17 @@
 
                 &__info {
                     @include flex-container(space-between, flex-end);
+                    flex: 1;
 
                     .item-text {
-                        max-width: 80%;
-
                         &--text-wrap {
                             text-wrap: wrap;
                         }
 
                         &--ellipsis {
                             text-overflow: ellipsis;
-                            white-space: nowrap;
+                            text-wrap: wrap;
+                            height: 1em;
                             overflow: hidden;
                         }
 
