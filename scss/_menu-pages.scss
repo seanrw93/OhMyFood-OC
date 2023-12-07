@@ -108,6 +108,7 @@
 
                 input[type="checkbox"]:checked ~ .menu-item-card__meal-check {
                     right: 0;
+                    transform-origin: right center; 
 
                     svg {
                         #icon-check {
@@ -132,7 +133,7 @@
 
                     svg {
                         #icon-check {
-                            transition: transform linear 200ms
+                            transition: transform linear 500ms;
                         }
                     }
                 }
@@ -142,9 +143,12 @@
                     flex: 1;
 
                     .item-text {
+                        max-width: 80%;
+
                         &--ellipsis {
                             text-overflow: ellipsis;
                             white-space: nowrap;
+                            overflow: hidden;
                         }
 
                         p {

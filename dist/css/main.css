@@ -323,6 +323,7 @@ input {
 }
 .menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__meal-check {
   right: 0;
+  transform-origin: right center;
 }
 .menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__meal-check svg #icon-check {
   transform: rotate(360deg);
@@ -338,7 +339,7 @@ input {
   transition: right linear 200ms;
 }
 .menu-container .food-section .menu-item-card__meal-check svg #icon-check {
-  transition: transform linear 200ms;
+  transition: transform linear 500ms;
 }
 .menu-container .food-section .menu-item-card__info {
   display: flex;
@@ -346,9 +347,13 @@ input {
   align-items: flex-end;
   flex: 1;
 }
+.menu-container .food-section .menu-item-card__info .item-text {
+  max-width: 80%;
+}
 .menu-container .food-section .menu-item-card__info .item-text--ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 .menu-container .food-section .menu-item-card__info .item-text p {
   font-size: 16px;
