@@ -89,13 +89,3 @@
 
   animation: fadeIn $duration $effect;
 }
-
-@mixin rotate-animation($deg) {
-  @keyframes rotate {
-    to {
-      transform: rotate($deg deg);
-    }
-  }
-
-  animation: rotate 200ms linear
-}

@@ -82,7 +82,7 @@ main {
         align-self: flex-start;
         margin-bottom: 40px;
 
-        @include min-width(35em) {
+        @include min-width(60em) {
             grid-column: span 3;
             justify-self: flex-start;
         }
@@ -152,7 +152,7 @@ main {
         @extend %h2-styles;
         align-self: flex-start;
 
-        @include min-width(768px) {
+        @include min-width(60em) {
             grid-row: 1;
             grid-column: span 2;
             justify-self: start;
@@ -251,7 +251,6 @@ main {
         @include font-size-weight(13px, 500);
         font-family: $roboto;
 
-        
         & > *:not(:last-child) {
             margin-bottom: 10px;
         }

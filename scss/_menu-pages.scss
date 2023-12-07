@@ -113,18 +113,26 @@
                     width: 100%;
                     height: 100%;
                     cursor: pointer;
+
+                    & ~ .menu-item-card__meal-check {
+                        svg {
+                                transform: rotate(359deg); 
+                                transition: transform 200ms linear
+                        }
+                    }
+                }
+
+                &__meal-check {
+                    @include flex-container(center, center);
+                    background-color: $tertiary;
+                    height: 100%;
                 }
 
                 input[type="checkbox"]:checked ~ .menu-item-card__meal-check {
                     right: 0;
 
-                    svg {
-                        path {
-                            #icon-check {
-                                @include rotate-animation(360);
-                                transform-origin: right center;
-                            }
-                        }
+                    svg {  
+                        transform: rotate(0);
                     }
                 }
 
@@ -146,6 +154,7 @@
                 &__info {
                     @include flex-container(space-between, flex-end);
                     flex: 1;
+                    width: 100%;
 
                     .item-text {
                         &--text-wrap {
@@ -154,9 +163,9 @@
 
                         &--ellipsis {
                             text-overflow: ellipsis;
-                            text-wrap: wrap;
-                            height: 1em;
+                            white-space: nowrap;
                             overflow: hidden;
+                            width: calc(100% - 60px);
                         }
 
                         p {

@@ -334,17 +334,22 @@ input {
   height: 100%;
   cursor: pointer;
 }
+.menu-container .food-section .menu-item-card > input[type=checkbox] ~ .menu-item-card__meal-check svg {
+  transform: rotate(359deg);
+  transition: transform 200ms linear;
+}
+.menu-container .food-section .menu-item-card__meal-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tertiary);
+  height: 100%;
+}
 .menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__meal-check {
   right: 0;
 }
-.menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__meal-check svg path #icon-check {
-  animation: rotate 200ms linear;
-  transform-origin: right center;
-}
-@keyframes rotate {
-  to {
-    transform: rotate(360 deg);
-  }
+.menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__meal-check svg {
+  transform: rotate(0);
 }
 .menu-container .food-section .menu-item-card input[type=checkbox]:checked ~ .menu-item-card__info .item-price {
   margin-right: 60px;
@@ -361,24 +366,21 @@ input {
   justify-content: space-between;
   align-items: flex-end;
   flex: 1;
-}
-.menu-container .food-section .menu-item-card__info .item-text {
-  max-width: 80%;
+  width: 100%;
 }
 .menu-container .food-section .menu-item-card__info .item-text--text-wrap {
   text-wrap: wrap;
 }
 .menu-container .food-section .menu-item-card__info .item-text--ellipsis {
   text-overflow: ellipsis;
-  text-wrap: wrap;
-  height: 1em;
+  white-space: nowrap;
   overflow: hidden;
+  width: calc(100% - 60px);
 }
 .menu-container .food-section .menu-item-card__info .item-text p {
   font-size: 16px;
 }
 .menu-container .food-section .menu-item-card__info .item-text p:first-of-type {
-  font-size: 16px;
   font-weight: 600;
   margin-bottom: 6px;
 }
@@ -394,6 +396,7 @@ input {
 }
 .menu-container .order-button {
   width: 186px;
+  margin: 40px 0;
 }
 
 main {
@@ -469,7 +472,7 @@ main {
   align-self: flex-start;
   margin-bottom: 40px;
 }
-@media (min-width: 35em) {
+@media (min-width: 60em) {
   .instructions-section .instructions-heading {
     grid-column: span 3;
     justify-self: flex-start;
@@ -587,7 +590,7 @@ main {
 .restaurants-section__heading {
   align-self: flex-start;
 }
-@media (min-width: 768px) {
+@media (min-width: 60em) {
   .restaurants-section__heading {
     grid-row: 1;
     grid-column: span 2;
