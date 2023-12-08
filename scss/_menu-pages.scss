@@ -131,7 +131,7 @@
                     & ~ .menu-item-card__meal-check {
                         svg {
                                 transform: rotate(359deg); 
-                                transition: transform 400ms linear
+                                transition: transform 300ms linear
                         }
                     }
                 }
@@ -162,7 +162,7 @@
                     height: 100%;
                     right: -60px;
                     object-fit: cover;
-                    transition: right linear 400ms;
+                    transition: right linear 300ms;
                 }
 
                 &__info {
@@ -194,7 +194,7 @@
                     }
 
                     .item-price {
-                        transition: padding linear 400ms;
+                        transition: padding linear 300ms;
 
                         p {
                             @include font-size-weight(16px, 600);
@@ -204,7 +204,7 @@
                 }
 
                 &:last-of-type {
-                    margin-bottom: 40px;
+                    margin-bottom: 20px;
                 }
         }     
     }
@@ -212,6 +212,6 @@
     .order-button {
         @extend %gradient-button;
         width: 186px;
-        margin: 40px 0;
+        margin: 20px 0;
     }
 }
