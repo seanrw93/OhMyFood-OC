@@ -400,16 +400,15 @@ input {
 }
 .menu-container .food-section .menu-item-card__info .item-text {
   flex: 1;
+  max-width: 80%;
 }
 .menu-container .food-section .menu-item-card__info .item-text--text-wrap {
   text-wrap: wrap;
 }
 .menu-container .food-section .menu-item-card__info .item-text--ellipsis {
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
   overflow: hidden;
-  max-width: calc(100% - 60px);
-  min-width: 30%;
 }
 .menu-container .food-section .menu-item-card__info .item-text p {
   font-size: 16px;
