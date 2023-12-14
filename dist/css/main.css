@@ -415,7 +415,7 @@ input {
 }
 .menu-container .food-section .menu-item-card__info .item-text p:first-of-type {
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 .menu-container .food-section .menu-item-card__info .item-price {
   transition: padding linear 300ms;
