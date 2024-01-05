@@ -1,5 +1,7 @@
 # OhMyFood
 
-Still a work in progress.
+OpenClassrooms Project 3: Integrate a mobile website with animations in CSS.
 
-Click [here](https://seanrw93.github.io/OhMyFood-OC/) for latest live version.
+Created using HTML and SCSS.
+
+Click [here](https://seanrw93.github.io/OhMyFood-OC/) for live version.
