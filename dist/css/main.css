@@ -412,6 +412,7 @@ input {
 }
 .menu-container .food-section .menu-item-card__info .item-text p {
   font-size: 16px;
+  padding-bottom: 1px;
 }
 .menu-container .food-section .menu-item-card__info .item-text p:first-of-type {
   font-weight: 600;
