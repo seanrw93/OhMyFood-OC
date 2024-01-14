@@ -235,8 +235,11 @@ main {
                         stroke: #000;
                     }
                 
-                    &:checked ~ svg path {
-                        @include fill-animation(url("#paint0_linear_25368_712"));
+
+                    @for $i from 1 through 4 {
+                        &:checked + svg path:nth-child(#{$i}) {
+                            @include fill-animation(url("#paint#{$i}_linear_25368_712"));
+                        }
                     }
 
                     &:not(:checked) ~ svg path {
