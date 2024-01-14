@@ -403,7 +403,7 @@ input {
   width: 0;
 }
 .menu-container .food-section .menu-item-card__info .item-text--text-wrap {
-  text-wrap: wrap;
+  overflow-wrap: normal;
 }
 .menu-container .food-section .menu-item-card__info .item-text--ellipsis {
   text-overflow: ellipsis;
