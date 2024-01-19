@@ -109,3 +109,32 @@
 
   animation: fadeIn $duration $effect;
 }
+
+@mixin fade-out-animation($duration) {
+  @keyframes fadeOut {
+    99% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      display: none
+    }
+  }
+
+  animation: fadeOut $duration linear forwards;
+}
+
+@mixin spin-animation($duration) {
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(1080deg)
+    }
+  }
+
+  animation: spin $duration infinite linear;
+}
