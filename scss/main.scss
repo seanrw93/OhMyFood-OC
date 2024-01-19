@@ -292,11 +292,11 @@ main {
     overflow: hidden;
 
     .spinner {
-        @include spin-animation(2s);
+        @include spin-animation(0.7s);
         position: fixed;
         top: calc(50% - 50px);
         left: calc(50% - 50px);
-        z-index: 999;
+        z-index: 11;
         width: 100px;
         height: 100px;
         border-radius: 50%;
