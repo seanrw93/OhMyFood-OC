@@ -138,3 +138,17 @@
 
   animation: spin $duration infinite linear;
 }
+
+@mixin enable-pointer-events($duration) {
+  @keyframes enablePointerEvents {
+    0% {
+      pointer-events: none;
+    }
+
+    100% {
+      pointer-events: all;
+    }
+  }
+
+  animation: enablePointerEvents $duration linear forwards;
+}

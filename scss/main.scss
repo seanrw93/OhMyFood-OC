@@ -1,6 +1,10 @@
 @import "resets", "colours", "placeholders", "typography", "mixins";
 @import "menu-pages";
 
+body {
+    @include enable-pointer-events(2.5s);
+}
+
 main {
     font-family: $roboto;
 }
@@ -288,8 +292,6 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-    overflow: hidden;
 
     .spinner {
         @include spin-animation(0.7s);
